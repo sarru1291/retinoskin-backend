@@ -7,20 +7,20 @@ const {User}=require('../../db/models/user.model');
 router.get('/',(req,res)=>{
 res.send('you have tried get methods');
 });
-router.post('/', (req, res) => {
+// router.post('/', (req, res) => {
   
-  var userData = _.pick(req.body, ['username','email', 'password','phone','address']);
-  // console.log(userData);
-  var user = new User(userData);
-  user.save().then(() => {
-    return user.generateAuthToken();
-  }).then((token) => {
-    res.header('x-auth', token).send(user);
-  }).catch((e) => {
-    res.status(400).send(e);
-  });
+//   var userData = _.pick(req.body, ['username','email', 'password','phone','address']);
+//   // console.log(userData);
+//   var user = new User(userData);
+//   user.save().then(() => {
+//     return user.generateAuthToken();
+//   }).then((token) => {
+//     res.header('x-auth', token).send(user);
+//   }).catch((e) => {
+//     res.status(400).send(e);
+//   });
   
-});
+// });
 
 // router.get('/me',authenticate, (req, res) => {
 
