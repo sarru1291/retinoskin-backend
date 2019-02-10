@@ -24,31 +24,31 @@ router.post('/', (req, res) => {
 
 // router.get('/me',authenticate, (req, res) => {
 
-router.get('/me', (req, res) => {
-  res.send(req.user);
-});
+// router.get('/me', (req, res) => {
+//   res.send(req.user);
+// });
 
-router.post('/login', (req, res) => {
-  var body = _.pick(req.body, ['email', 'password']);
+// router.post('/login', (req, res) => {
+//   var body = _.pick(req.body, ['email', 'password']);
 
-  User.findByCredentials(body.email, body.password).then((user) => {
-    return user.generateAuthToken().then((token) => {
-      res.header('x-auth', token).send(user);
-    });
-    // return res.send(user);
-  }).catch((e) => {
-    res.status(400).send();
-  });
-});
+//   User.findByCredentials(body.email, body.password).then((user) => {
+//     return user.generateAuthToken().then((token) => {
+//       res.header('x-auth', token).send(user);
+//     });
+//     // return res.send(user);
+//   }).catch((e) => {
+//     res.status(400).send();
+//   });
+// });
 
-// router.delete('/me/token', authenticate, (req, res) => {
-  router.delete('/me/token', (req, res) => {
-  req.user.removeToken(req.token).then(() => {
-    res.status(200).send();
-  }, () => {
-    res.status(400).send();
-  });
-});
+// // router.delete('/me/token', authenticate, (req, res) => {
+//   router.delete('/me/token', (req, res) => {
+//   req.user.removeToken(req.token).then(() => {
+//     res.status(200).send();
+//   }, () => {
+//     res.status(400).send();
+//   });
+// });
 // router.post('/message',authenticate,(req,res)=>{
 router.post('/message',(req,res)=>{
   var body = _.pick(req.body, ['modelOutput', 'imageUploadedUrl','to']);
