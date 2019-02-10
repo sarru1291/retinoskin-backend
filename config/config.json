@@ -1,0 +1,18 @@
+{
+  "test":{
+    "PORT":8086,
+    "JWT_SECRET":"lasjf2@354ljkfas*#34",
+    "CLOUD_NAME":"sarru1291",
+    "API_KEY":"344198912754411",
+    "API_SECRET":"aUbcYhdie1tQ9zx8fqB4dypP3OQ",
+    "MONGODB_URI":"mongodb://localhost:27017/retinoskin"
+  },
+  "development":{
+    "PORT":8086,
+    "JWT_SECRET":"sfjasjfljfas;jfk#4saf",
+    "CLOUD_NAME":"sarru1291",
+    "API_KEY":"344198912754411",
+    "API_SECRET":"aUbcYhdie1tQ9zx8fqB4dypP3OQ",
+    "MONGODB_URI":"mongodb+srv://admin01:admin01@clouster01-zo6uo.mongodb.net/retinoskin?retryWrites=true"
+  }
+}

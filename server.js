@@ -3,7 +3,7 @@ const express=require('express');
 // const cors=require('cors');
 const app=express();
 const path=require('path');
-// require('./config/config');
+require('./config/config');
 // const imageTest=require('./routers/imageTest/imageTest');
 // const users=require('./routers/users/users');
 const port=process.env.PORT || 8086;
